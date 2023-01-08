@@ -1,0 +1,19 @@
+{
+  "name": "site-cipo",
+  "version": "1.0.0",
+  "description": "site cipo - landing and shop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlmasNurbayev/site-cipo.git"
+  },
+  "author": "Almas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlmasNurbayev/site-cipo/issues"
+  },
+  "homepage": "https://github.com/AlmasNurbayev/site-cipo#readme"
+}
