@@ -1,28 +1,23 @@
-import React, { useEffect, useState } from 'react';
-import CreateProduct from './components/CreateProduct';
-import ErrorMessage from './components/ErrorMessage';
-import { Loader } from './components/Loader';
-import Modal from './components/Modal';
-import { Product } from './components/Product';
-import { useProducts } from './hooks/product';
+import React, { useContext, useEffect, useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { Navigation } from './components/Navigation';
+import { AboutPage } from './pages/AboutPage';
+import { ProductPage } from './pages/ProductPage';
 
 //import logo from './logo.svg';
 
 
 function App() {
+return (
+  <>
+  <Navigation/>
+  <Routes>
+    <Route path="/" element={<ProductPage/>} />
+    <Route path="/about" element={<AboutPage/>} />
+  </Routes>
+  </>
+)
 
-  const {error, loading, products} = useProducts();
-  
-  return (
-    <div className='container mx-auto max-w-2xl pt-5'>
-      <Modal title='Create new Product'>
-        <CreateProduct/>
-      </Modal> 
-      {error && <ErrorMessage error={error}/>}
-      {loading && <Loader/>}
-      {products.map(element => <Product product={element} key={element.id} />)}
-    </div>
-  );
 }
 
 export default App;
