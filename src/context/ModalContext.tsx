@@ -24,7 +24,6 @@ export const ModalState = ({children}: {children: React.ReactNode}) => {
         <ModalContext.Provider value={{modal, open, close}}>
             {children}
         </ModalContext.Provider>
-
     )
 
 }
